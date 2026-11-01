@@ -46,6 +46,8 @@ fun FormIsian(
         Column(modifier = Modifier.padding(isiRuang),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally) {
+
+            // 1. input nama lengkap
             OutlinedTextField(
                 value = "",
                 singleLine = true,
@@ -55,10 +57,41 @@ fun FormIsian(
                 label = {Text(text = stringResource(id = R.string.nama_lengkap))},
                 onValueChange = {}
             )
+
+            // 2. divider pertama
             HorizontalDivider(modifier = Modifier
-                .padding(20.dp)
-                .width(250.dp), thickness = 1.dp, color = Color.Red
+                    .padding(20.dp)
+                    .width(250.dp),
+                thickness = 1.dp,
+                color = Color.Red
             )
+
+            // 3. radio button jk
+            Row{
+                jenisJK.forEach {
+                        item ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = false,
+                            onClick = {item}
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
+
+            // 4. divider kedua
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(20.dp)
+                    .width(250.dp),
+                thickness = dimensionResource(
+                    id = R.dimen.thickness_divider
+                ),
+                color = Color.Red
+            )
+
+            // 5. input alamat
             OutlinedTextField(
                 value = "",
                 singleLine = true,
@@ -77,26 +110,7 @@ fun FormIsian(
             ) {
                 Text(stringResource(id = R.string.submit))
             }
-            Row{
-                jenisJK.forEach {
-                        item ->
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        RadioButton(
-                            selected = false,
-                            onClick = {item}
-                        )
-                    }
-                }
-            }
-            HorizontalDivider(
-                modifier = Modifier
-                    .padding(20.dp)
-                    .width(250.dp),
-                thickness = dimensionResource(
-                    id = R.dimen.thickness_divider
-                ),
-                color = Color.Red
-            )
+
         }
     }
 }
