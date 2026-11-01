@@ -57,7 +57,7 @@ fun FormIsian(
             Row{
                 jenisJK.forEach {
                         item ->
-                    Row(verticalAlignment = Alignment.CenterHorizontally) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
                         RadioButton(
                             selected = false,
                             onClick = {item}
