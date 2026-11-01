@@ -26,6 +26,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringArrayResource
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -53,7 +54,7 @@ fun FormIsian(
                 modifier = Modifier
                     .padding(top = 20.dp)
                     .width(250.dp),
-                label = {Text(text = "Nama Lengkap")},
+                label = {Text(text = stringResource(id = R.string.nama_lengkap))},
                 onValueChange = {}
             )
             HorizontalDivider(modifier = Modifier
@@ -65,7 +66,7 @@ fun FormIsian(
                 singleLine = true,
                 modifier = Modifier
                     .width(250.dp),
-                label = {Text(text = "Alamat")},
+                label = {Text(text = stringResource(id = R.string.alamat))},
                 onValueChange = {},
             )
             Spacer(modifier = Modifier.height(30.dp))
