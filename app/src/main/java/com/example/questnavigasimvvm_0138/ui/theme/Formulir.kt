@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun FormIsian(
     jenisJK: List<String> = listOf("Laki-laki", "Perempuan"),
-    onSumbitBtnClick: () -> Unit
+    onSubmitBtnClick: () -> Unit
 ){
     Scaffold(modifier = Modifier,
         {
@@ -70,9 +70,10 @@ fun FormIsian(
             Spacer(modifier = Modifier.height(30.dp))
 
             Button(
-                modifier = Modifier.fillMaxWidth(1f)
+                modifier = Modifier
+                    .fillMaxWidth(1f)
                     .padding(25.dp),
-                onClick = onSumbitBtnClick
+                onClick = onSubmitBtnClick
             ) {
                 Text(stringResource(id = R.string.submit))
             }
