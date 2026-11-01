@@ -1,4 +1,4 @@
-## Hasil Tampilan UI - Acitvity 5
+## Hasil Tampilan UI - Activity 5
 
 <img width="374" height="748" alt="Screenshot 2026-11-01 at 18 26 08" src="https://github.com/user-attachments/assets/f4a4e7f1-c2b7-45b0-85e3-0fa93dd48ce7" />
 
