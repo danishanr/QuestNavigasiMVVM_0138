@@ -19,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
@@ -63,9 +64,17 @@ fun FormIsian(
                             onClick = {item}
                         )
                     }
-
                 }
             }
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(20.dp)
+                    .width(250.dp),
+                thickness = dimensionResource(
+                    id = R.dimen.thickness_divider
+                ),
+                color = Color.Red
+            )
         }
     }
 }
